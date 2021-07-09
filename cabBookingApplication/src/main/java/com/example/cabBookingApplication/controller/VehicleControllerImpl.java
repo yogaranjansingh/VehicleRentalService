@@ -25,6 +25,7 @@ public class VehicleControllerImpl implements  VehicleController{
 
     @Override
     public Vehicle bookVehicle(VehicleType vehicleType, Date startTime, Date endTime) {
+        System.out.println("Booked Vehicle : ");
        return vehicleService.bookVehicle(vehicleType, startTime, endTime);
     }
 }

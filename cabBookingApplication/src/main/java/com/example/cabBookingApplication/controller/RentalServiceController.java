@@ -14,6 +14,6 @@ public interface RentalServiceController {
 
     void addBranch(String branchName);
     void addVehicle(String vehicleId, VehicleType vehicleType, String branchName);
-    Map<VehicleType, List<Vehicle>> viewVehicleInventory(Date startTime, Date endTime);
+    Map<String, Map<VehicleType, List<Vehicle>>> viewVehicleInventory(Date startTime, Date endTime);
 
 }

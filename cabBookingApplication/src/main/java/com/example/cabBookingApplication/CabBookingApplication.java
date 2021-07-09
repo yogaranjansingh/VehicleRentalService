@@ -37,8 +37,11 @@ public class CabBookingApplication {
 
 		rentalServiceController.addVehicle("DL 01 MR 9312", VehicleType.Hatchback,"Cyber-City");
 
-		vehicleController.bookVehicle(VehicleType.Sedan,new Date(), new Date());
-		SpringApplication.run(CabBookingApplication.class, args);
+		System.out.println(vehicleController.bookVehicle(VehicleType.Sedan,new Date(), new Date()));
+
+		System.out.println("Vehicle Inventory");
+		System.out.println(rentalServiceController.viewVehicleInventory(new Date(), new Date()).toString());
+		//SpringApplication.run(CabBookingApplication.class, args);
 	}
 
 }

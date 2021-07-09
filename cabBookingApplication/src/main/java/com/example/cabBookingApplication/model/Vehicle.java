@@ -10,6 +10,24 @@ public class Vehicle {
     boolean isAvailable;
     int price;
     List<TimeWindow> bookedDurations;
+    RentalServiceBranch branch;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public RentalServiceBranch getBranch() {
+        return branch;
+    }
+
+    public void setBranch(RentalServiceBranch branch) {
+        this.branch = branch;
+    }
 
     public List<TimeWindow> getBookedDurations() {
         return bookedDurations;
@@ -47,5 +65,16 @@ public class Vehicle {
         this.id = id;
         this.vehicleType = vehicleType;
         this.bookedDurations = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "id='" + id + '\'' +
+                ", vehicleType=" + vehicleType +
+                ", isAvailable=" + isAvailable +
+                ", price=" + price +
+                ", bookedDurations=" + bookedDurations +
+                '}';
     }
 }

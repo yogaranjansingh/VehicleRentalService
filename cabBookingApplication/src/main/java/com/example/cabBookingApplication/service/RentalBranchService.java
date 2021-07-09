@@ -12,6 +12,7 @@ public class RentalBranchService {
     {
         RentalServiceBranch rentalServiceBranch = new RentalServiceBranch(branchName);
         rentalServiceRepository.rentalServiceBranches.put(branchName, rentalServiceBranch);
+        System.out.println("Rental branch added : "+rentalServiceBranch.toString());
     }
 
     public void allocatePrice(String branchName, VehicleType vehicleType, int price) {

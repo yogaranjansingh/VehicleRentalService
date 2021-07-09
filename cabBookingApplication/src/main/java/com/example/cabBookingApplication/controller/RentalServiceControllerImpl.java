@@ -34,8 +34,7 @@ public class RentalServiceControllerImpl implements  RentalServiceController{
     }
 
     @Override
-    public Map<VehicleType, List<Vehicle>> viewVehicleInventory(Date startTime, Date endTime) {
-        //return vehicleService.getVehicleInventory(startTime, endTime);
-        return null;
+    public Map<String, Map<VehicleType, List<Vehicle>>> viewVehicleInventory(Date startTime, Date endTime) {
+        return vehicleService.getVehicleInventory(startTime, endTime);
     }
 }

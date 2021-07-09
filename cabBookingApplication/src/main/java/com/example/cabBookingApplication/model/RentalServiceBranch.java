@@ -11,8 +11,6 @@ public class RentalServiceBranch {
     Map<VehicleType, List<Vehicle>> vehicles;
     Map<VehicleType, Integer> priceMap;
 
-
-
     public RentalServiceBranch(String branchName) {
         this.name = branchName;
         this.priceMap = new HashMap<>();
@@ -57,5 +55,16 @@ public class RentalServiceBranch {
 
     public void setPriceMap(Map<VehicleType, Integer> priceMap) {
         this.priceMap = priceMap;
+    }
+
+    @Override
+    public String toString() {
+        return "RentalServiceBranch{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address=" + address +
+                ", vehicles=" + vehicles +
+                ", priceMap=" + priceMap +
+                '}';
     }
 }
